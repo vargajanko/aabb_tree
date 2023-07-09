@@ -9,17 +9,9 @@ pub struct Tree {
     pub free_list_entry: usize,
 }
 
-#[derive(Resource)]
+#[derive(Resource, Default)]
 pub struct MovedAabbs {
     pub moved_aabbs: Vec<usize>,
-}
-
-impl Default for MovedAabbs {
-    fn default() -> Self {
-        MovedAabbs {
-            moved_aabbs: Vec::new(),
-        }
-    }
 }
 
 impl Default for Tree {
